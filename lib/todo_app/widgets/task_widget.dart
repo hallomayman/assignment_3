@@ -17,17 +17,14 @@ class TaskWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(15)),
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
       child: CheckboxListTile(
-        subtitle:IconButton(onPressed: (){
-          //task.deleteTask(tasksList);
-          tasksList.remove(task);
-
-        }, icon: const Icon(Icons.delete)) ,
-
+        subtitle: IconButton(
+            onPressed: () {
+              //task.deleteTask(tasksList);
+              tasksList.remove(task);
+            },
+            icon: const Icon(Icons.delete)),
         title: Text(task.title),
         value: task.isCompleted,
-
-
-
         onChanged: (v) {
           fun(task);
         },
